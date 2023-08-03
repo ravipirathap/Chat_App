@@ -28,5 +28,7 @@ app.post("/authenticate", async (req, res) => {
 
  
 });
+app.use(express.static(path.join(__dirname, '../vite-project/build')));
+
 
 app.listen(3001);
