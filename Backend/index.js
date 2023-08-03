@@ -29,10 +29,7 @@ app.post("/authenticate", async (req, res) => {
 
  
 });
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../vite-project/dist/index.html'));
-  });
-  
+app.use(express.static(path.join(__dirname, '/vite-project/dist')));
 
 
 app.listen(3001);
